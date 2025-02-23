@@ -189,8 +189,6 @@ namespace CraftApp
             }
             foreach (DataRow row in _shopLineupParam_RecipeCsv.Rows)
             {
-                //foreach (DataColumn column in _shopLineupParam_RecipeCsv.Columns)
-                //{
                     int equipType = Convert.ToInt32(row["equipType"]); // weapon or goods
                     int id = Convert.ToInt32(row["equipId"]); // id of item crafted
                     string itemName;
@@ -203,7 +201,6 @@ namespace CraftApp
                     {
                         row["Name"] = itemName;
                     }
-                //}
             }
             _shopLineupParam_RecipeCsv = KeepColumns(_shopLineupParam_RecipeCsv, new string[] { "ID", "Name", "setNum", "mtrlId" });
 
